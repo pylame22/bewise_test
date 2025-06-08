@@ -14,8 +14,7 @@ class UserModel(BaseSAModel):
 
     __table_args__ = (
         sa.Index("idx_users_username", "username", unique=True),
-        sa.Index("idx_users_status", "status", postgresql_using="hash"),
-        sa.Index("idx_users_deleted_at", "deleted_at"),
+        sa.Index("idx_users_status", "status", postgresql_using="hash"),  # if we have highly selective values
     )
 
     id: Mapped[int] = mapped_column(primary_key=True)

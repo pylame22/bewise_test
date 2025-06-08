@@ -40,7 +40,6 @@ def upgrade() -> None:
         sa.Column("deleted_at", sa.DateTime(timezone=True), nullable=True),
         sa.PrimaryKeyConstraint("id"),
     )
-    op.create_index("idx_users_deleted_at", "users", ["deleted_at"], unique=False)
     op.create_index("idx_users_status", "users", ["status"], unique=False, postgresql_using="hash")
     op.create_index("idx_users_username", "users", ["username"], unique=True)
     op.create_table(
