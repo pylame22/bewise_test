@@ -10,5 +10,6 @@
 ### Improvements
 1. add pagination
 2. advanced permissions
-2. add tests
-3. add logging
+3. add tests
+4. add logging
+5. city and country should be a tables
