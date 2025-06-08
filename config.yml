@@ -1,0 +1,12 @@
+postgres:
+  user: ${POSTGRES_USER}
+  password: ${POSTGRES_PASSWORD}
+  db: ${POSTGRES_DB}
+  host: bewise_test_postgres
+  port: 5432
+  echo: true
+  pool_size: 10
+  max_overflow: 20
+
+security:
+  jwt_secret: ${JWT_SECRET}
